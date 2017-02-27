@@ -1,0 +1,37 @@
+{
+    "name": "karma-koa",
+    "version": "1.0.0",
+    "description": "karma koa server",
+    "license": "MIT",
+    "engines": {
+        "node": ">=4.2.3"
+    },
+    "main": "./dist/index",
+    "dependencies": {
+        "koa": "^1.1.2"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.5.1",
+        "babel-core": "^6.4.0",
+        "babel-plugin-transform-es2015-destructuring": "^6.4.0",
+        "babel-plugin-transform-es2015-modules-commonjs": "^6.3.16",
+        "babel-plugin-transform-es2015-parameters": "^6.3.13",
+        "babel-plugin-transform-es2015-spread": "^6.4.0"
+    },
+    "babel": {
+        "plugins": [
+            "transform-es2015-spread",
+            "transform-es2015-parameters",
+            "transform-es2015-destructuring",
+            "transform-es2015-modules-commonjs"
+        ]
+    },
+    "scripts": {
+        "compile": "node_modules/.bin/babel src -d dist",
+        "prepublish": "npm run compile"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/2046/karma-koa.git"
+    }
+}
